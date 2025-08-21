@@ -1,6 +1,5 @@
     const start1 = document.querySelector("#start1");
     const start2 = document.querySelector("#start2");
-    const stopBtn = document.querySelector("#stop");
 
     let color1 = "#053564";
     let color2 = "#001748";
@@ -26,14 +25,6 @@
 
     start2.addEventListener("click", () => {
       color2 = randomColor();
-      start2.innerText = color2;
-      updateGradient();
-    });
-
-    stopBtn.addEventListener("click", () => {
-      color1 = "#053564";
-      color2 = "#001748";
-      start1.innerText = color1;
       start2.innerText = color2;
       updateGradient();
     });

@@ -32,21 +32,13 @@ button {
 }
 
 #start1 {
-  background: linear-gradient(135deg, #4ade80, #22c55e);
-  color: #000;
+  background: black;
+  color: #ffffff;
 }
 
 #start2 {
-  background: linear-gradient(135deg, #4338ca, #3730a3);
-}
-
-#stop {
-  background: linear-gradient(135deg, #000, #333);
-}
-
-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background: white;
+  color: black;
 }
 
 button:active {
