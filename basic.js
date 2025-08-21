@@ -1,46 +1,41 @@
-var start1 = document.querySelector("#start1");
-var start2 = document.querySelector("#start2");
+    const start1 = document.querySelector("#start1");
+    const start2 = document.querySelector("#start2");
+    const stopBtn = document.querySelector("#stop");
 
-const randomcolor = function () {
-  const number = "0123456789ABCDEF";
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += number[Math.floor(Math.random() * 16)];
-  }
-  return color;
-};
+    let color1 = "#053564";
+    let color2 = "#001748";
 
-const startcolorchanging1 = () => {
-  var rgba1 = randomcolor();
-  console.log(rgba1);
-  start1.innerText = `${rgba1}`;
-  document.body.style.backgroundImage = `linear-gradient(to right, ${rgba1} , #444)`;
-}
+    const randomColor = () => {
+      const digits = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += digits[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    };
 
-const startcolorchanging2 = () => {
-  let rgba2 = randomcolor();
-  console.log(rgba2);
-  start2.innerText = `${rgba2}`;
-  document.body.style.backgroundImage = `linear-gradient(to right, #000 ,${rgba2})`;
-}
+    const updateGradient = () => {
+      document.body.style.backgroundImage = `linear-gradient(to right, ${color1}, ${color2})`;
+    };
 
-const stopcolorchanging = () => {
-  document.body.style.backgroundImage = `linear-gradient(to right, #000 , #444)`;
-}
+    start1.addEventListener("click", () => {
+      color1 = randomColor();
+      start1.innerText = color1;
+      updateGradient();
+    });
 
-// let id;
-// const startcolorchanging = function () {
-//   if (!id) {
-//     id = setInterval(function () {
-//       document.body.style.backgroundColor = randomcolor();
-//     }, 1000);
-//   }
-// };
-// const stopcolorchanging = function () {
-//   clearInterval(id);
-//   id = null;
-// };
+    start2.addEventListener("click", () => {
+      color2 = randomColor();
+      start2.innerText = color2;
+      updateGradient();
+    });
 
-start1.addEventListener("click", startcolorchanging1);
-start2.addEventListener("click", startcolorchanging2);
-document.querySelector("#stop").addEventListener("click", stopcolorchanging);
+    stopBtn.addEventListener("click", () => {
+      color1 = "#053564";
+      color2 = "#001748";
+      start1.innerText = color1;
+      start2.innerText = color2;
+      updateGradient();
+    });
+
+    updateGradient();
