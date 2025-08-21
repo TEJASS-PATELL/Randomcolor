@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #051937 , #004d7a , #008793 , #00bf72 , #a8eb12);
+}
+#start1{
+    background-color: rgb(55, 255, 0);
+}
+#start2{
+    background-color: rgba(31, 13, 143, 0.771);
+    color: white;
+}
+#stop{
+    background-color: black;
+    color: white;
+}
+button{
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    border: solid black 2px;
+    margin: 5px;
+    font-size: 20px;
+}
+#div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25%;
+}
